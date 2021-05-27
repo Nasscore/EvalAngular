@@ -1,12 +1,3 @@
-<div>
-  <h1>Titre : {{ statA.titre }}</h1>
-  <h1>Titre : {{ statA.valeur }}</h1>
-  <h1>Titre : {{ statA.appreciation }}</h1>
-</div>
-
-<div>
-  <h1>Titre : {{ statB.titre }}</h1>
-  <h1>Titre : {{ statB.valeur }}</h1>
-  <h1>Titre : {{ statB.appreciation }}</h1>
-</div>
+<app-statistique [stat]="stat1"></app-statistique>
+<app-statistique [stat]="stat2"></app-statistique>
 <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Statistique } from './models/statistique';
 
 @Component({
@@ -9,16 +9,17 @@ import { Statistique } from './models/statistique';
 export class AppComponent {
   title = 'EvalAngular';
 
-  public statA: Statistique = new Statistique(
-    'azertyuiop123',
-    'Cas covid en 2021',
-    3000000,
-    'WARNING'
+  public stat1: Statistique = new Statistique(
+    'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
+    'Mort du covid en 2021',
+    250000,
+    'SUCCESS'
   );
-  public statB: Statistique = new Statistique(
-    '123poiuytreza',
-    'nombre de morts covid 2021',
-    255000,
+
+  public stat2: Statistique = new Statistique(
+    'fa1f5f40-be3b-11eb-91ec-7f5875ecfb47',
+    'Nombre de contamination en 2021',
+    3000000,
     'SUCCESS'
   );
 }
