@@ -9,17 +9,30 @@ import { Statistique } from './models/statistique';
 export class AppComponent {
   title = 'EvalAngular';
 
-  public stat1: Statistique = new Statistique(
-    'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
-    'Mort du covid en 2021',
-    250000,
-    'SUCCESS'
-  );
-
-  public stat2: Statistique = new Statistique(
-    'fa1f5f40-be3b-11eb-91ec-7f5875ecfb47',
-    'Nombre de contamination en 2021',
-    3000000,
-    'SUCCESS'
-  );
+  public tabStats: Statistique[] = [
+    {
+      id: 'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
+      titre: 'Mort du covid en 2021',
+      valeur: 250000,
+      appreciation: 'SUCCESS',
+    },
+    {
+      id: 'fa1f5f40-be3b-11eb-91ec-7f5875ecfb47',
+      titre: 'Nombre de contamination en 2021',
+      valeur: 3000000,
+      appreciation: 'SUCCESS',
+    },
+  ];
+  constructor() {
+    setTimeout(() => {
+      this.tabStats.push(
+        new Statistique(
+          'fa1f5f40-be3b-11eb-91ec-7f5875ecfb48',
+          'Nombre de vaccinés en 2021',
+          33600000,
+          'WARNING'
+        )
+      );
+    }, 3000);
+  }
 }
